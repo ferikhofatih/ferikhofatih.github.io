@@ -60,7 +60,7 @@ nav ul li a:hover {
   justify-content: space-between;
   align-items: center;
   min-height: 90vh;
-  padding: 60px;
+  padding: 60px 120px;
   background: linear-gradient(135deg, #1e90ff, #20c997);
   color: white;
 }
