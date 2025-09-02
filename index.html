@@ -3,51 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Ferikho Fatih Azhar</title>
+  <title>Portofolio Saya</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Navbar -->
+  <nav>
+    <h2>Nama Kamu</h2>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero">
-    <div class="hero-content">
-      <h2>Halo Saya</h2>
-      <h1>FERIKHO FATIH AZHAR</h1>
-      <h3>Network Engineer | Web Developer</h3>
-      <p>
-        Seorang manusia biasa yang mencoba keberuntungan di dunia digital, 
-        berjuang demi masa depan yang menjanjikan.
-      </p>
+    <img src="assets/Ferikho.png" alt="Foto Profil">
+    <div>
+      <h1>Halo Saya <span>Nama Kamu</span></h1>
+      <p>Network Engineer | Web Developer</p>
       <a href="CV_Ferikho.pdf" class="btn">Download CV</a>
     </div>
-    <div class="hero-image">
-      <img src="images/ferikho.png" alt="Ferikho Fatih Azhar">
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>Tentang Saya</h2>
+    <p>Sedikit cerita tentang background pendidikan & pengalaman.</p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Kemampuan Saya</h2>
+    <div class="skills-grid">
+      <img src="assets/skill-icons/html.png" alt="HTML">
+      <img src="assets/skill-icons/css.png" alt="CSS">
+      <img src="assets/skill-icons/js.png" alt="JS">
+      <!-- Tambah sesuai kebutuhan -->
     </div>
   </section>
 
-  <!-- Tentang -->
-  <section class="about">
-    <h2>Tentang Saya</h2>
-    <p>
-      Saya adalah mahasiswa Telkom University dengan ketertarikan pada bidang 
-      jaringan komputer, pemrograman, dan pengembangan web. 
-      Saya senang belajar hal baru dan terbuka untuk tantangan.
-    </p>
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Pengalaman Projects</h2>
+    <div class="project-card">
+      <h3>Monitoring Mikrotik</h3>
+      <p>Monitoring mikrotik menggunakan bot telegram.</p>
+    </div>
+    <div class="project-card">
+      <h3>Portfolio Web</h3>
+      <p>Portfolio web menggunakan Bootstrap 5.</p>
+    </div>
   </section>
 
-  <!-- Kontak -->
-  <section class="contact">
-    <h2>Kontak</h2>
-    <ul>
-      <li>Email: <a href="mailto:ferikho@example.com">ferikho@example.com</a></li>
-      <li>LinkedIn: <a href="https://linkedin.com/in/ferikho" target="_blank">linkedin.com/in/ferikho</a></li>
-      <li>GitHub: <a href="https://github.com/ferikho" target="_blank">github.com/ferikho</a></li>
-    </ul>
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Hubungi Saya</h2>
+    <form>
+      <input type="text" placeholder="Nama Lengkap" required>
+      <input type="email" placeholder="Alamat Email" required>
+      <textarea placeholder="Pesan"></textarea>
+      <button type="submit">Kirim</button>
+    </form>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>© 2025 Ferikho Fatih Azhar. All rights reserved.</p>
+    <p>© 2025 Nama Kamu. Created with ❤️</p>
+    <div class="social-icons">
+      <a href="#">Instagram</a>
+      <a href="#">GitHub</a>
+      <a href="#">WhatsApp</a>
+    </div>
   </footer>
-
 </body>
 </html>
