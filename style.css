@@ -1,9 +1,10 @@
-/* === RESET & BASE === */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -20,11 +21,19 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 header h1 {
   font-size: 26px;
   font-weight: bold;
+  transition: color 0.3s;
+}
+
+header h1:hover {
+  color: #0dcaf0;
 }
 
 nav ul {
@@ -39,20 +48,21 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
-  transition: 0.3s;
+  transition: color 0.3s, transform 0.2s;
 }
 
 nav ul li a:hover {
   color: #0dcaf0;
+  transform: scale(1.1);
 }
 
-/* === HERO SECTION === */
+/* === HERO === */
 #hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 90vh;
-  padding: 60px 100px; /* atur jarak kiri kanan */
+  padding: 60px 100px;
   background: linear-gradient(135deg, #1e90ff, #20c997);
   color: white;
 }
@@ -84,20 +94,20 @@ nav ul li a:hover {
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.3s;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
 }
 
 .hero-text a:hover {
   background: #0dcaf0;
   color: white;
+  transform: translateY(-3px);
 }
 
-/* === HERO IMAGE === */
 .hero-img {
   flex: 1;
   display: flex;
   justify-content: flex-end;
-  padding-right: 60px; /* biar gak terlalu mepet kanan */
+  padding-right: 60px;
 }
 
 .hero-img img {
@@ -105,36 +115,41 @@ nav ul li a:hover {
   border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.25);
   object-fit: cover;
+  transition: transform 0.3s;
 }
 
-/* === ABOUT SECTION === */
-#about {
+.hero-img img:hover {
+  transform: scale(1.05);
+}
+
+/* === SECTIONS === */
+section {
   padding: 80px 100px;
-  background: white;
+  text-align: center;
 }
 
-#about h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  color: #1e90ff;
-}
-
-/* === SKILLS SECTION === */
-#skills {
-  padding: 80px 100px;
-  background: #f1f3f5;
-}
-
-#skills h2 {
+section h2 {
   font-size: 32px;
   margin-bottom: 30px;
-  color: #20c997;
+  position: relative;
 }
 
-.skills-list {
+section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #1e90ff;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* === SKILLS === */
+#skills .skills-list {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
 }
 
 .skill-card {
@@ -144,47 +159,44 @@ nav ul li a:hover {
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .skill-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-/* === PROJECTS SECTION === */
-#projects {
-  padding: 80px 100px;
-  background: white;
-}
-
-#projects h2 {
-  font-size: 32px;
-  margin-bottom: 30px;
-  color: #1e90ff;
-}
-
+/* === PROJECTS === */
 .project-card {
-  background: #f8f9fa;
+  background: #fff;
   padding: 20px;
   border-radius: 12px;
-  margin-bottom: 20px;
+  margin: 0 auto 20px auto;
+  max-width: 600px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  transition: 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-card:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-/* === CONTACT SECTION === */
-#contact {
-  padding: 80px 100px;
-  background: #f1f3f5;
+/* === CONTACT === */
+.contact-info p {
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
-#contact h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
+.contact-info a {
+  color: #1e90ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.contact-info a:hover {
   color: #20c997;
 }
 
@@ -194,4 +206,16 @@ footer {
   background: #212529;
   color: white;
   padding: 20px;
+}
+
+/* === ANIMATIONS === */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
