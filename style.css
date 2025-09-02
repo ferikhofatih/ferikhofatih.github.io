@@ -69,15 +69,15 @@ nav ul li a:hover {
   justify-content: center; /* rata tengah secara horizontal */
   align-items: center;     /* rata tengah secara vertikal */
   min-height: 90vh;
-  padding: 60px 80px;      /* biar gak terlalu nempel ke pinggir */
+  padding: 60px 100px;      /* biar gak terlalu nempel ke pinggir */
   background: linear-gradient(135deg, #1e90ff, #20c997);
   color: white;
-  gap: 40px; /* jarak antara teks dan foto */
+  gap: 80px; /* jarak antara teks dan foto */
 }
 
 .hero-text {
   flex: 1;
-  max-width: 700px;      /* lebih lebar supaya nama tidak turun */
+  max-width: 600px;      /* lebih lebar supaya nama tidak turun */
   white-space: nowrap;   /* paksa teks tetap 1 baris */
 }
 
@@ -116,7 +116,8 @@ nav ul li a:hover {
 .hero-img {
   flex: 1;
   display: flex;
-  justify-content: flex-start; /* geser sedikit ke kiri biar gak mepet */
+  justify-content: flex-end; /* tetap di kanan */
+  padding-left: 40px;        /* kasih jarak biar gak tabrakan */
 }
 
 .hero-img img {
