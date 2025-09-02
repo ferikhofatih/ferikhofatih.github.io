@@ -66,14 +66,13 @@ nav ul li a:hover {
 /* ========================= */
 #hero {
   display: flex;
-  justify-content: center;   /* sudah center horizontal */
-  align-items: center;       /* sudah center vertical */
+  justify-content: center;
+  align-items: center;
   min-height: 90vh;
   padding: 60px 100px;
   background: linear-gradient(135deg, #1e90ff, #20c997);
   color: white;
 }
-
 
 .hero-text {
   flex: 1;
