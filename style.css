@@ -115,7 +115,7 @@ nav ul li a:hover {
   flex: 1;
   display: flex;
   justify-content: flex-end; /* foto profil kanan */
-  padding-right: 100px;
+  padding-right: 140px;
 }
 
 .hero-img img {
