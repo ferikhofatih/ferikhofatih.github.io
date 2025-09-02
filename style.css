@@ -110,6 +110,7 @@ nav ul li a:hover {
   width: 300px;
   border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  margin-right: 80px; /* geser ke kiri, jadi gak terlalu kanan */
 }
 
 /* Sections */
