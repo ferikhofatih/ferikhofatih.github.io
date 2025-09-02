@@ -63,21 +63,22 @@ nav ul li a:hover {
 /* ========================= */
 /* HERO / PROFILE SECTION */
 /* ========================= */
+/* HERO / PROFILE SECTION */
 #hero {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 50px;
+  justify-content: center;   /* Tengah horizontal */
+  align-items: center;       /* Tengah vertikal */
+  flex-wrap: wrap;           /* Agar stack di layar kecil */
+  gap: 50px;                 /* Jarak antar elemen */
   min-height: 90vh;
-  padding: 60px 100px;
+  padding: 60px 20px;        /* Padding kiri-kanan lebih kecil */
   background: linear-gradient(135deg, #1e90ff, #20c997);
   color: white;
-  text-align: center;
+  text-align: center;        /* Biar teks center */
 }
 
 .hero-text {
-  flex: 1 1 400px;
+  flex: 1 1 400px;           /* Biar fleksibel tapi ada min size */
   max-width: 600px;
 }
 
@@ -115,7 +116,7 @@ nav ul li a:hover {
 .hero-img {
   flex: 1 1 300px;
   display: flex;
-  justify-content: center;
+  justify-content: center;   /* Gambar center */
 }
 
 .hero-img img {
@@ -138,6 +139,7 @@ nav ul li a:hover {
     padding: 40px 20px;
   }
 }
+
 
 /* ========================= */
 /* SECTION UMUM (ABOUT, DLL) */
