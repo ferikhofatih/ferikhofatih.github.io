@@ -3,80 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portofolio Ferikho</title>
+  <title>Portofolio - Ferikho Fatih</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar">
-    <h2>Ferikho Fatih Azhar</h2>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <header>
+    <nav>
+      <h1 class="logo">Ferikho Fatih</h1>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <img src="assets/Ferikho.png" alt="Foto Profil">
-    <div>
-      <h1>Halo Saya <span>FERIKHO FATIH AZHAR</span></h1>
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-text">
+      <h2>Halo Saya <br><span>FERIKHO FATIH</span></h2>
       <p>Network Engineer | Web Developer</p>
-      <p>Seorang manusia biasa yang mencoba keberuntungan di dunia digital, berjuang demi masa depan yang menjanjikan.</p>
-      <a href="assets/CV_Ferikho.pdf" download class="btn">Download CV</a>
+      <p class="desc">Seorang manusia biasa yang mencoba keberuntungan di dunia digital, berjuang demi masa depan yang menjanjikan.</p>
+      <a href="assets/CV.pdf" class="btn" download>Download CV</a>
+    </div>
+    <div class="hero-img">
+      <img src="assets/foto.png" alt="Foto Profil">
     </div>
   </section>
 
   <!-- About -->
   <section id="about">
-    <h2>Tentang Saya</h2>
-    <p>Saya adalah mahasiswa Telkom University dengan ketertarikan pada bidang jaringan komputer, pemrograman, dan pengembangan web. Saya senang belajar hal baru dan terbuka untuk tantangan.</p>
+    <h2>About Me</h2>
+    <p>Saya adalah seorang Network Engineer sekaligus Web Developer yang memiliki passion di bidang teknologi. Terbiasa mengerjakan project jaringan, website, dan aplikasi berbasis web.</p>
   </section>
 
   <!-- Skills -->
   <section id="skills">
-    <h2>Kemampuan Saya</h2>
-    <div class="skills-grid">
-      <img src="assets/skill-icons/html.png" alt="HTML">
-      <img src="assets/skill-icons/css.png" alt="CSS">
-      <img src="assets/skill-icons/js.png" alt="JS">
-    </div>
+    <h2>Skills</h2>
+    <ul>
+      <li>🌐 Networking (Cisco, Mikrotik)</li>
+      <li>💻 Web Development (HTML, CSS, JS)</li>
+      <li>⚡ Database (MySQL, PostgreSQL)</li>
+      <li>☁️ Cloud & Linux Administration</li>
+    </ul>
   </section>
 
   <!-- Projects -->
   <section id="projects">
-    <h2>Pengalaman Projects</h2>
-    <div class="project-card">
-      <h3>Monitoring Mikrotik</h3>
-      <p>Monitoring mikrotik menggunakan bot telegram.</p>
-    </div>
-    <div class="project-card">
-      <h3>Portfolio Web</h3>
-      <p>Portfolio web menggunakan Bootstrap 5.</p>
+    <h2>Projects</h2>
+    <div class="project-list">
+      <div class="project-card">
+        <h3>Project 1</h3>
+        <p>Website portfolio sederhana dengan GitHub Pages.</p>
+      </div>
+      <div class="project-card">
+        <h3>Project 2</h3>
+        <p>Simulasi jaringan menggunakan Cisco Packet Tracer.</p>
+      </div>
     </div>
   </section>
 
   <!-- Contact -->
   <section id="contact">
-    <h2>Hubungi Saya</h2>
-    <form>
-      <input type="text" placeholder="Nama Lengkap" required>
-      <input type="email" placeholder="Alamat Email" required>
-      <textarea placeholder="Pesan"></textarea>
-      <button type="submit">Kirim</button>
-    </form>
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:ferikhofatih@gmail.com">ferikhofatih@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/ferikhofatih" target="_blank">linkedin.com/in/ferikhofatih</a></p>
+    <p>GitHub: <a href="https://github.com/ferikhofatih" target="_blank">github.com/ferikhofatih</a></p>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Ferikho Fatih Azhar. Created with ❤️</p>
-    <div class="social-icons">
-      <a href="#">Instagram</a>
-      <a href="#">GitHub</a>
-      <a href="#">WhatsApp</a>
-    </div>
+    <p>© 2025 Ferikho Fatih. All rights reserved.</p>
   </footer>
 </body>
 </html>
