@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portofolio - Ferikho Fatih</title>
+  <title>Ferikho Fatih - Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navbar -->
+
+  <!-- === NAVBAR === -->
   <header>
+    <h1>Ferikho Fatih</h1>
     <nav>
-      <h1 class="logo">Ferikho Fatih Azhar</h1>
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -20,29 +21,36 @@
     </nav>
   </header>
 
-  <!-- Hero -->
-  <section id="hero">
-    <div class="hero-text">
-      <h2>Halo Saya <br><span>FERIKHO FATIH AZHAR</span></h2>
-      <p class="tagline">Network Engineer | Web Developer</p>
-      <p class="desc">Seorang manusia biasa yang mencoba keberuntungan di dunia digital, berjuang demi masa depan yang menjanjikan.</p>
-      <a href="assets/CVFerikho.pdf" class="btn" download>📄 Download CV</a>
-    </div>
-    <div class="hero-img">
-      <img src="assets/Ferikho1.png" alt="Foto Profil">
-    </div>
-  </section>
+<!-- === HERO === -->
+<section id="hero" class="reveal">
+  <div class="hero-text">
+    <h2>Halo Saya</h2>
+    <h1>FERIKHO FATIH</h1>
+    <p>Network Engineer | Web Developer</p>
+    <p>Seorang manusia biasa yang mencoba keberuntungan di dunia digital, berjuang demi masa depan yang menjanjikan.</p>
+    <!-- Link ke file CV -->
+    <a href="assets/CVFerikho.pdf" target="_blank">Download CV</a>
+  </div>
+  <div class="hero-img">
+    <!-- Foto profil -->
+    <img src="assets/Ferikho1.png" alt="Foto Profil Ferikho Fatih">
+  </div>
+</section>
 
-  <!-- About -->
-  <section id="about">
+
+  <!-- === ABOUT === -->
+  <section id="about" class="reveal">
     <h2>About Me</h2>
-    <p>Saya adalah seorang Network Engineer sekaligus Web Developer yang memiliki passion di bidang teknologi. Terbiasa mengerjakan project jaringan, website, dan aplikasi berbasis web.</p>
+    <p>
+      Saya adalah seorang Network Engineer sekaligus Web Developer yang memiliki passion di bidang teknologi. 
+      Terbiasa mengerjakan project jaringan, website, dan aplikasi berbasis web.
+    </p>
   </section>
 
-  <!-- Skills -->
-  <section id="skills">
+  <!-- === SKILLS === -->
+  <section id="skills" class="reveal">
     <h2>Skills</h2>
-    <div class="skills-grid">
+    <div class="skills-list">
       <div class="skill-card">🌐 Networking (Cisco, Mikrotik)</div>
       <div class="skill-card">💻 Web Development (HTML, CSS, JS)</div>
       <div class="skill-card">⚡ Database (MySQL, PostgreSQL)</div>
@@ -50,32 +58,58 @@
     </div>
   </section>
 
-  <!-- Projects -->
-  <section id="projects">
+  <!-- === PROJECTS === -->
+  <section id="projects" class="reveal">
     <h2>Projects</h2>
-    <div class="project-list">
-      <div class="project-card">
-        <h3>Project 1</h3>
-        <p>Website portfolio sederhana dengan GitHub Pages.</p>
-      </div>
-      <div class="project-card">
-        <h3>Project 2</h3>
-        <p>Simulasi jaringan menggunakan Cisco Packet Tracer.</p>
-      </div>
+    <div class="project-card">
+      <h3>Project 1</h3>
+      <p>Website portfolio sederhana dengan GitHub Pages.</p>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact">
+  <!-- === CONTACT === -->
+  <section id="contact" class="reveal">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:ferikhofatih@gmail.com">ferikhofatih@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/ferikhofatih" target="_blank">linkedin.com/in/ferikhofatih</a></p>
-    <p>GitHub: <a href="https://github.com/ferikhofatih" target="_blank">github.com/ferikhofatih</a></p>
+    <div class="contact-info">
+      <p>📧 Email: <a href="mailto:ferikho@example.com">ferikho@example.com</a></p>
+      <p>💼 LinkedIn: <a href="https://linkedin.com/in/ferikho" target="_blank">linkedin.com/in/ferikho</a></p>
+      <p>🐙 GitHub: <a href="https://github.com/ferikhofatih" target="_blank">github.com/ferikhofatih</a></p>
+    </div>
   </section>
 
-  <!-- Footer -->
+  <!-- === FOOTER === -->
   <footer>
-    <p>© 2025 Ferikho Fatih. All rights reserved.</p>
+    <p>&copy; 2025 Ferikho Fatih. All Rights Reserved.</p>
   </footer>
+
+  <!-- === SCRIPT ANIMASI === -->
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    });
+
+    // Reveal on scroll
+    function reveal() {
+      const reveals = document.querySelectorAll(".reveal");
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 100;
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        }
+      }
+    }
+
+    window.addEventListener("scroll", reveal);
+    reveal(); // panggil sekali biar hero langsung muncul
+  </script>
+
 </body>
 </html>
