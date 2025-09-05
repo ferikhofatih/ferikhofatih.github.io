@@ -132,6 +132,10 @@ nav ul li a:hover {
 /* ========================= */
 /* ABOUT SECTION 2 COLUMN */
 /* ========================= */
+#about {
+  background: #f8f9fa;
+}
+
 .about-container {
   display: flex;
   justify-content: center;
@@ -144,12 +148,13 @@ nav ul li a:hover {
 }
 
 .about-card {
-  flex: 1 1 400px;
+  flex: 1 1 45%;
   background: white;
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
+  min-width: 300px;
 }
 
 .about-card:hover {
@@ -178,6 +183,7 @@ nav ul li a:hover {
 .about-card a:hover {
   color: #20c997;
 }
+
 
 
 /* ========================= */
