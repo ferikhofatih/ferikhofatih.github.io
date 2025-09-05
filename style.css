@@ -129,37 +129,44 @@ nav ul li a:hover {
   transform: scale(1.05);
 }
 
-/* ========================= */
-/* ABOUT SECTION 2 COLUMN */
-/* ========================= */
+/* === ABOUT SECTION === */
 #about {
+  padding: 80px 20px;
   background: #f8f9fa;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
 }
 
 .about-container {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
+  align-items: stretch;
   flex-wrap: wrap;
+  gap: 30px;
   max-width: 1100px;
   margin: 0 auto;
-  text-align: left;
 }
 
 .about-card {
   flex: 1 1 45%;
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-  min-width: 300px;
+  text-align: left;
+  min-width: 320px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .about-card h3 {
@@ -170,8 +177,8 @@ nav ul li a:hover {
 
 .about-card p {
   font-size: 16px;
-  margin-bottom: 15px;
   line-height: 1.6;
+  margin-bottom: 15px;
 }
 
 .about-card a {
@@ -184,6 +191,18 @@ nav ul li a:hover {
   color: #20c997;
 }
 
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-card {
+    flex: 1 1 100%;
+    max-width: 500px;
+  }
+}
 
 
 /* ========================= */
