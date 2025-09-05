@@ -129,21 +129,23 @@ nav ul li a:hover {
   transform: scale(1.05);
 }
 
-/* === ABOUT SECTION KHUSUS === */
+/* === GLOBAL SECTION (tetap rata tengah untuk default) === */
+section {
+  padding: 80px 100px;
+  text-align: center;
+}
+
+/* === KHUSUS ABOUT === */
 #about {
-  padding: 80px 20px;
   background: #f8f9fa;
+  text-align: left; /* Override agar teks dalam #about rata kiri */
 }
 
 #about h2 {
-  text-align: center;
-  font-size: 36px;
-  margin-bottom: 50px;
-  position: relative;
-  display: block;
+  text-align: center; /* Tetap rata tengah untuk judul */
 }
 
-.about-container {
+#about .about-container {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -153,52 +155,52 @@ nav ul li a:hover {
   margin: 0 auto;
 }
 
-.about-card {
+#about .about-card {
   flex: 1 1 45%;
   background: #ffffff;
   padding: 25px 30px;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  text-align: left; /* <--- Biar cuma di about aja yang rata kiri */
   min-width: 320px;
+  text-align: left; /* Override lagi biar aman */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.about-card:hover {
+#about .about-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-.about-card h3 {
+#about .about-card h3 {
   font-size: 24px;
   margin-bottom: 15px;
   color: #1e90ff;
 }
 
-.about-card p {
+#about .about-card p {
   font-size: 16px;
   line-height: 1.6;
   margin-bottom: 15px;
 }
 
-.about-card a {
+#about .about-card a {
   color: #1e90ff;
   font-weight: bold;
   text-decoration: none;
 }
 
-.about-card a:hover {
+#about .about-card a:hover {
   color: #20c997;
 }
 
 /* RESPONSIVE */
 @media screen and (max-width: 768px) {
-  .about-container {
+  #about .about-container {
     flex-direction: column;
     align-items: center;
   }
 
-  .about-card {
+  #about .about-card {
     flex: 1 1 100%;
     max-width: 500px;
   }
