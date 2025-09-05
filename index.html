@@ -1,116 +1,408 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ferikho Fatih - Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Network Engineer & Web Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-
-  <!-- === NAVBAR === -->
-  <header>
-    <h1>Ferikho Fatih Azhar</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Portfolio</a>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
     </nav>
-  </header>
 
-  <!-- === HERO === -->
-  <section id="hero" class="reveal">
-    <div class="hero-text">
-      <h2>Halo Saya</h2>
-      <h1>FERIKHO FATIH AZHAR</h1>
-      <p>Network Engineer | Web Developer</p>
-      <p>Seorang manusia biasa yang mencoba keberuntungan di dunia digital, berjuang demi masa depan yang menjanjikan.</p>
-      <a href="assets/CVFerikho.pdf" target="_blank">Download CV</a>
-    </div>
-    <div class="hero-img">
-      <img src="assets/Ferikho1.png" alt="Foto Profil Ferikho Fatih">
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Halo, Saya <span class="highlight">John Doe</span></h1>
+                <p class="hero-subtitle">Network Engineer & Web Developer</p>
+                <p class="hero-description">
+                    Passionate about building robust network infrastructures and creating innovative web solutions.
+                    Always eager to learn new technologies and solve complex problems.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                    <a href="#projects" class="btn btn-secondary">View My Work</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-card">
+                    <div class="profile-img">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- === ABOUT === -->
-  <section id="about" class="reveal">
-    <h2>About Me</h2>
-    <p>
-      Saya adalah seorang yang antusias di bidang teknologi, dengan minat pada
-      pengembangan web dan jaringan komputer. Memiliki pengalaman dalam
-      mengembangkan aplikasi web, serta pengetahuan dasar dalam manajemen
-      jaringan.
-    </p>
-  </section>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Saya adalah seorang Network Engineer dan Web Developer dengan pengalaman dalam 
+                        merancang, mengimplementasikan, dan mengelola infrastruktur jaringan yang kompleks. 
+                        Selain itu, saya juga memiliki passion dalam pengembangan web modern dengan 
+                        teknologi terkini.
+                    </p>
+                    <p>
+                        Dengan latar belakang teknis yang kuat, saya mampu memahami kebutuhan bisnis 
+                        dan mentransformasikannya menjadi solusi teknologi yang efektif dan efisien. 
+                        Saya selalu antusias untuk mempelajari teknologi baru dan menghadapi tantangan 
+                        yang kompleks.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-card">
+                        <i class="fas fa-code"></i>
+                        <h3>Clean Code</h3>
+                        <p>Writing maintainable and scalable code</p>
+                    </div>
+                    <div class="about-card">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>Network Design</h3>
+                        <p>Building robust network infrastructures</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- === SKILLS === -->
-  <section id="skills" class="reveal">
-    <h2>Skills</h2>
-    <div class="skills-list">
-      <div class="skill-card">HTML, CSS, JavaScript</div>
-      <div class="skill-card">React, Node.js</div>
-      <div class="skill-card">Networking</div>
-      <div class="skill-card">Linux Server</div>
-    </div>
-  </section>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Network Engineering</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fas fa-server"></i>
+                            <span>Cisco Routing & Switching</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Network Security</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-wifi"></i>
+                            <span>Wireless Networks</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-fire"></i>
+                            <span>Firewall Configuration</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Network Monitoring</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-cloud"></i>
+                            <span>SD-WAN</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Web Development</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js-square"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-react"></i>
+                            <span>React.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>MySQL/MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- === PROJECTS === -->
-  <section id="projects" class="reveal">
-    <h2>Projects</h2>
-    <div class="project-card">
-      <h3>Website Portfolio</h3>
-      <p>Membangun portfolio pribadi menggunakan HTML, CSS, dan JavaScript.</p>
-    </div>
-    <div class="project-card">
-      <h3>Network Design</h3>
-      <p>Merancang jaringan komputer untuk skala kecil menengah.</p>
-    </div>
-  </section>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Corporate Network Infrastructure</h3>
+                        <p>Designed and implemented a complete network infrastructure for a 500+ employee company including VLAN segmentation, security policies, and redundancy.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Cisco</span>
+                            <span class="tech-tag">VLAN</span>
+                            <span class="tech-tag">Security</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-  <!-- === CONTACT === -->
-  <section id="contact" class="reveal">
-    <h2>Contact</h2>
-    <p>Email: ferikhofatih@gmail.com</p>
-    <p>LinkedIn: linkedin.com/in/ferikhofatihazhar</p>
-    <p>GitHub: github.com/ferikhofatih</p>
-  </section>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>E-Commerce Website</h3>
+                        <p>Full-stack e-commerce platform with payment integration, inventory management, and responsive design. Built with React and Node.js.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-  <!-- === FOOTER === -->
-  <footer>
-    <p>&copy; 2025 Ferikho Fatih. All Rights Reserved.</p>
-  </footer>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Network Monitoring Dashboard</h3>
+                        <p>Real-time network monitoring dashboard with alerts, performance metrics, and automated reporting capabilities.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">SNMP</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-  <!-- === SCRIPT ANIMASI === -->
-  <script>
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener("click", function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-          behavior: "smooth"
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Portfolio Website</h3>
+                        <p>Responsive portfolio website with modern design, smooth animations, and optimized performance. Built with HTML, CSS, and JavaScript.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Site
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Mari Berkolaborasi!</h3>
+                    <p>
+                        Saya selalu terbuka untuk mendiskusikan proyek baru, peluang kerja sama, 
+                        atau hanya sekedar berbagi pengalaman tentang teknologi. Jangan ragu untuk menghubungi saya!
+                    </p>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>john.doe@email.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+62 123 4567 8900</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Jakarta, Indonesia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>John Doe</h3>
+                    <p>Network Engineer & Web Developer</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 John Doe. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile navigation toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
         });
-      });
-    });
 
-    // Reveal on scroll
-    function reveal() {
-      const reveals = document.querySelectorAll(".reveal");
-      for (let i = 0; i < reveals.length; i++) {
-        const windowHeight = window.innerHeight;
-        const elementTop = reveals[i].getBoundingClientRect().top;
-        const elementVisible = 100;
-        if (elementTop < windowHeight - elementVisible) {
-          reveals[i].classList.add("active");
-        }
-      }
-    }
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
 
-    window.addEventListener("scroll", reveal);
-    reveal();
-  </script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
 
+        // Add active class to navigation links based on scroll position
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Contact form submission (basic validation)
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+    </script>
 </body>
 </html>
