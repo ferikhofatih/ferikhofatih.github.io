@@ -1,126 +1,254 @@
-/* Reset dasar */
+/* ========================= */
+/* RESET & BASE STYLE */
+/* ========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background: #f9f9f9;
+  background: #f8f9fa;
   color: #333;
+  line-height: 1.6;
 }
 
-/* Header */
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
 header {
-  background: #111;
-  color: #fff;
-  padding: 15px 0;
-}
-
-header nav {
-  width: 90%;
-  margin: auto;
+  background: #212529;
+  color: white;
+  padding: 20px 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-header nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-header nav a {
-  color: #fff;
-  text-decoration: none;
+header h1 {
+  font-size: 26px;
   font-weight: bold;
+  transition: color 0.3s;
 }
 
-/* Hero */
-.hero {
-  background: linear-gradient(to right, #00b4db, #0083b0);
-  color: #fff;
+header h1:hover {
+  color: #0dcaf0;
+}
+
+nav ul {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 50px 0;
-  flex-wrap: wrap;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.2s;
+}
+
+nav ul li a:hover {
+  color: #0dcaf0;
+  transform: scale(1.1);
+}
+
+/* ========================= */
+/* HERO / PROFILE SECTION */
+/* ========================= */
+/* HERO / PROFILE SECTION */
+#hero {
+  display: flex;
+  justify-content: center;   /* Tengah horizontal */
+  align-items: center;       /* Tengah vertikal */
+  flex-wrap: wrap;           /* Agar stack di layar kecil */
+  gap: 50px;                 /* Jarak antar elemen */
+  min-height: 90vh;
+  padding: 60px 20px;        /* Padding kiri-kanan lebih kecil */
+  background: linear-gradient(135deg, #1e90ff, #20c997);
+  color: white;
+  text-align: center;        /* Biar teks center */
 }
 
 .hero-text {
-  max-width: 500px;
+  flex: 1 1 400px;           /* Biar fleksibel tapi ada min size */
+  max-width: 600px;
+}
+
+.hero-text h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
 }
 
 .hero-text h1 {
-  font-size: 2.5rem;
-}
-
-.hero-img img {
-  max-width: 250px;
-  border-radius: 15px;
-}
-
-/* Tentang Saya */
-.about-section {
-  text-align: center;
-  padding: 50px 0;
-  background: #fff;
-}
-
-.about-section h2 {
-  font-size: 2rem;
+  font-size: 52px;
   margin-bottom: 20px;
 }
 
-.about-container {
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.hero-text a {
+  background: white;
+  color: #1e90ff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.hero-text a:hover {
+  background: #0dcaf0;
+  color: white;
+  transform: translateY(-3px);
+}
+
+.hero-img {
+  flex: 1 1 300px;
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  max-width: 1000px;
-  margin: auto;
+  justify-content: center;   /* Gambar center */
 }
 
-.about-card {
-  background: #fdfdfd;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  max-width: 450px;
-  text-align: left; /* tetap rapi kiri, tapi center di tengah halaman */
+.hero-img img {
+  width: 280px;
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+  object-fit: cover;
+  transition: transform 0.3s;
 }
 
-/* Skills */
-#skills, #projects, #contact {
+.hero-img img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive untuk layar kecil */
+@media (max-width: 768px) {
+  #hero {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+}
+
+
+/* ========================= */
+/* SECTION UMUM (ABOUT, DLL) */
+/* ========================= */
+section {
+  padding: 80px 100px;
   text-align: center;
-  padding: 50px 0;
 }
 
-.skills-container, .projects-container {
+section h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #1e90ff;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* ========================= */
+/* SKILLS SECTION */
+/* ========================= */
+#skills .skills-list {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
-  max-width: 1000px;
-  margin: auto;
+  justify-content: center;
 }
 
-.skill-card, .project-card {
+.skill-card {
+  flex: 1 1 200px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ========================= */
+/* PROJECTS SECTION */
+/* ========================= */
+.project-card {
   background: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  width: 220px;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 0 auto 20px auto;
+  max-width: 600px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Footer */
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ========================= */
+/* CONTACT SECTION */
+/* ========================= */
+.contact-info p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.contact-info a {
+  color: #1e90ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.contact-info a:hover {
+  color: #20c997;
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
 footer {
-  background: #111;
-  color: #fff;
   text-align: center;
+  background: #212529;
+  color: white;
   padding: 20px;
-  margin-top: 30px;
+}
+
+/* ========================= */
+/* ANIMATIONS (REVEAL) */
+/* ========================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
