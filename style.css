@@ -624,6 +624,7 @@ body {
     .hero-buttons {
         justify-content: center;
         flex-wrap: wrap;
+        gap: 0.8rem;
     }
 
     .about-content {
