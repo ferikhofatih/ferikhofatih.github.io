@@ -355,28 +355,6 @@ body {
     text-align: justify;
 }
 
-.about-stats {
-    display: flex;
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.stat {
-    text-align: center;
-}
-
-.stat-number {
-    display: block;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #3498db;
-}
-
-.stat-label {
-    font-size: 0.9rem;
-    color: #666;
-}
-
 .about-image {
     display: flex;
     flex-direction: column;
@@ -798,10 +776,6 @@ body {
        gap: 2rem;
    }
 
-   .about-stats {
-       justify-content: center;
-   }
-
    .skills-container {
        grid-template-columns: 1fr;
        gap: 2rem;
@@ -879,11 +853,6 @@ body {
 
    .skills-grid {
        grid-template-columns: 1fr;
-   }
-
-   .about-stats {
-       flex-direction: column;
-       gap: 1rem;
    }
 
    .project-tech {
